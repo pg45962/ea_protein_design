@@ -8,9 +8,9 @@ The objective of this work was to use a previously established framework and ada
 
 Frameworks used throughout this project:
 
-GenProtEA - https://github.com/martinsM17/GenProtEA.git
-VAE - deep-protein-generation - https://github.com/alex-hh/deep-protein-generation.git
-Protein-proetin binding optimization - GenOpt
+GenProtEA - https://github.com/martinsM17/GenProtEA.git \
+VAE - deep-protein-generation - https://github.com/alex-hh/deep-protein-generation.git \
+Protein-protein binding optimization - GenOpt 
 
 ## Author
 
