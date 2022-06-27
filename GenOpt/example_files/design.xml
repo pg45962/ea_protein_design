@@ -1,0 +1,57 @@
+<ROSETTASCRIPTS>
+ <SCOREFXNS>
+  <ScoreFunction name="ref2015_full" weights="ref2015"/>
+  <ScoreFunction name="centroid" weights="interchain_cen"/>
+ </SCOREFXNS>
+ <RESIDUE_SELECTORS>
+ </RESIDUE_SELECTORS>
+ <TASKOPERATIONS>
+  <RestrictToRepacking name="rrp"/>
+  <ProteinInterfaceDesign name="pido" interface_distance_cutoff="8.0"/>
+ </TASKOPERATIONS>
+ <SIMPLE_METRICS>
+ </SIMPLE_METRICS>
+ <FILTERS>
+ </FILTERS>
+ <MOVERS>
+   <MutateResidue name="mut1" target="53B" new_res="XXXX" />
+   <MutateResidue name="mut2" target="57B" new_res="XXXX" />
+   <MutateResidue name="mut3" target="101B" new_res="XXXX" />
+   <MutateResidue name="mut4" target="102B" new_res="XXXX" />
+   <MutateResidue name="mut5" target="162B" new_res="XXXX" />
+   <MutateResidue name="mut6" target="163B" new_res="XXXX" />
+   <MutateResidue name="mut7" target="182B" new_res="XXXX" />
+   <MutateResidue name="mut8" target="199B" new_res="XXXX" />
+   <MutateResidue name="mut9" target="223B" new_res="XXXX" />
+   <MutateResidue name="mut10" target="224B" new_res="XXXX" />
+   <MutateResidue name="mut11" target="226B" new_res="XXXX" />
+   <Prepack name="ppk" jump_number="1" task_operations="rrp"/>
+   <PackRotamersMover name="design_interface" task_operations="pido,rrp"/>
+   <MinMover name="min_chi" bb="0" chi="1" scorefxn="ref2015_full" max_iter="10000" tolerance="0.005" />
+   <MinMover name="min_bb" bb="1" chi="1" scorefxn="ref2015_full" max_iter="10000" tolerance="0.005"/>
+   <InterfaceAnalyzerMover name="iam" scorefxn="ref2015_full" interface="B_A"/>
+   <DockingProtocol name="dock_it" docking_score_low="centroid" docking_score_high="ref2015_full"
+       low_res_protocol_only="False" partners="B_A"/>
+   <SwitchResidueTypeSetMover name="bck_to_fa" set="fa_standard"/>
+ </MOVERS>
+ <PROTOCOLS>
+  <Add mover_name="mut1"/>
+  <Add mover_name="mut2"/>
+  <Add mover_name="mut3"/>
+  <Add mover_name="mut4"/>
+  <Add mover_name="mut5"/>
+  <Add mover_name="mut6"/>
+  <Add mover_name="mut7"/>
+  <Add mover_name="mut8"/>
+  <Add mover_name="mut9"/>
+  <Add mover_name="mut10"/>
+  <Add mover_name="mut11"/>
+  <Add mover_name="ppk"/>
+  <Add mover_name="dock_it"/>
+  <Add mover_name="design_interface"/>
+  <Add mover_name="min_chi"/>
+  <Add mover_name="min_bb"/>
+  <Add mover_name="iam"/>
+ </PROTOCOLS>
+ <OUTPUT />
+</ROSETTASCRIPTS>
