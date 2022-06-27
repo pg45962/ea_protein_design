@@ -10,7 +10,7 @@ Frameworks used throughout this project:
 
 GenProtEA - https://github.com/martinsM17/GenProtEA.git \
 VAE - deep-protein-generation - https://github.com/alex-hh/deep-protein-generation.git \
-Protein-proetin binding optimization - GenOpt 
+Protein-protein binding optimization - GenOpt 
 
 ## Author
 
