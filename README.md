@@ -9,3 +9,7 @@ The objective of this work was to use a previously established framework and ada
 Framework used throughout this project:
 
 GenProtEA - https://github.com/martinsM17/GenProtEA.git
+
+## Author
+
+Alexandre Areias Castro PG45962
