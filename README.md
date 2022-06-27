@@ -12,4 +12,4 @@ GenProtEA - https://github.com/martinsM17/GenProtEA.git
 
 ## Author
 
-Alexandre Areias Castro PG45962
+Alexandre Areias Castro - Msc Bioinformatics Student at Universidade do Minho, Braga
